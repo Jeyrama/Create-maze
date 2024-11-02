@@ -31,3 +31,6 @@ Rules:
   5. If you hit any walls or go outside the maze border, you should return Dead.
   6. If you find yourself still in the maze after using all the moves, you should return Lost.
 */
+
+
+// Solution
