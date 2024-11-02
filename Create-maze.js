@@ -60,3 +60,20 @@ function mazeRunner(maze, directions) {
 }
 
 // or
+
+function mazeRunner(maze, dirs) {
+  let y = maze.findIndex(arr => arr.includes(2));
+  let x = maze[y].indexOf(2);
+  let curPos;
+  for (let i = 0; i < dirs.length; i++) {
+    if (dirs[i] === 'N') y--;
+    if (dirs[i] === 'S') y++;
+    if (dirs[i] === 'W') x--;
+    if (dirs[i] === 'E') x++;
+    if (!maze[y]) return 'Dead';
+    curPos = maze[y][x];
+    if (curPos === 3) return 'Finish';
+    if (curPos === 1 || curPos === undefined) return 'Dead';
+  }
+  return 'Lost';
+}
