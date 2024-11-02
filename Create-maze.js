@@ -58,3 +58,5 @@ function mazeRunner(maze, directions) {
   }
   return 'Lost';
 }
+
+// or
